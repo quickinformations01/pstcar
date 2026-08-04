@@ -680,3 +680,97 @@ font-size:34px;
 }
 
 }
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features{
+
+    padding:100px 0;
+
+    background:white;
+
+}
+
+.features h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow-small);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-large);
+
+}
+
+.icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:20px;
+
+    background:#DBEAFE;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:38px;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+    font-size:26px;
+
+}
+
+.card p{
+
+    color:var(--muted);
+
+}
