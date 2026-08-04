@@ -1018,20 +1018,19 @@ background:#F8FAFC;
 
 .register-card{
 
-max-width:900px;
+max-width:950px;
 
 margin:auto;
 
 background:#fff;
 
-padding:45px;
+padding:55px;
 
-border-radius:24px;
+border-radius:30px;
 
-box-shadow:var(--shadow-large);
+box-shadow:0 20px 60px rgba(0,0,0,.08);
 
 }
-
 .progress-bar{
 
 height:10px;
