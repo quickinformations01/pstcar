@@ -1,1 +1,115 @@
+/* =====================================================
+   PST CAR
+   VERSION 1.0
+===================================================== */
 
+:root{
+
+    --primary:#2563EB;
+    --primary-dark:#1D4ED8;
+
+    --secondary:#0F172A;
+
+    --background:#F8FAFC;
+
+    --white:#FFFFFF;
+
+    --text:#1E293B;
+
+    --muted:#64748B;
+
+    --border:#E2E8F0;
+
+    --success:#16A34A;
+
+    --danger:#DC2626;
+
+    --warning:#F59E0B;
+
+    --radius:18px;
+
+    --transition:.30s ease;
+
+    --shadow-small:0 6px 20px rgba(0,0,0,.06);
+
+    --shadow-medium:0 15px 35px rgba(0,0,0,.10);
+
+    --shadow-large:0 30px 60px rgba(0,0,0,.15);
+
+    --container:1250px;
+
+}
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    line-height:1.6;
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    font:inherit;
+
+}
+
+input{
+
+    font:inherit;
+
+}
+
+.container{
+
+    width:min(94%,var(--container));
+
+    margin:auto;
+
+}
