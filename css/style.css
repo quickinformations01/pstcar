@@ -989,3 +989,17 @@ display:none;
 }
 
 }
+
+.primary-btn,
+.secondary-btn,
+.login-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+}
