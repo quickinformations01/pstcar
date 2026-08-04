@@ -109,100 +109,95 @@ button{
     background:var(--primary-dark);
 }
 
-/* ================= HERO ================= */
+<section id="home" class="hero">
 
-.hero{
-    padding:90px 0;
-}
+    <div class="container hero-grid">
 
-.hero-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
+        <div class="hero-left">
 
-.badge{
-    display:inline-block;
-    background:#DBEAFE;
-    color:var(--primary);
-    padding:10px 18px;
-    border-radius:40px;
-    font-weight:700;
-    margin-bottom:25px;
-}
+            <div class="badge">
+                🚖 Pakistan's Trusted Ride Platform
+            </div>
 
-.hero h1{
-    font-size:58px;
-    line-height:1.1;
-    margin-bottom:25px;
-}
+            <h1>
+                Book Your Ride
+                <span>Anytime, Anywhere</span>
+            </h1>
 
-.hero h1 span{
-    color:var(--primary);
-}
+            <p>
+                PST Car connects passengers with trusted drivers across Pakistan.
+                Fast booking, fair fares and secure rides.
+            </p>
 
-.hero p{
-    color:var(--muted);
-    font-size:20px;
-    margin-bottom:35px;
-}
+            <div class="hero-buttons">
 
-.hero-buttons{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
+                <button class="primary-btn" id="passengerBtn">
+                    Book a Ride
+                </button>
 
-.primary-btn,
-.secondary-btn{
-    padding:16px 34px;
-    border-radius:50px;
-    font-size:17px;
-    font-weight:700;
-    transition:.3s;
-}
+                <button class="secondary-btn" id="driverBtn">
+                    Become a Driver
+                </button>
 
-.primary-btn{
-    background:var(--primary);
-    color:#fff;
-}
+            </div>
 
-.primary-btn:hover{
-    transform:translateY(-3px);
-    background:var(--primary-dark);
-}
+            <div class="hero-stats">
 
-.secondary-btn{
-    background:#fff;
-    color:var(--primary);
-    border:2px solid var(--primary);
-}
+                <div class="stat">
+                    <h2>10K+</h2>
+                    <p>Passengers</p>
+                </div>
 
-.secondary-btn:hover{
-    background:var(--primary);
-    color:#fff;
-}
+                <div class="stat">
+                    <h2>2K+</h2>
+                    <p>Drivers</p>
+                </div>
 
-/* Phone */
+                <div class="stat">
+                    <h2>50+</h2>
+                    <p>Cities</p>
+                </div>
 
-.phone{
-    width:320px;
-    height:620px;
-    background:#fff;
-    border-radius:45px;
-    margin:auto;
-    box-shadow:var(--shadow);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
+            </div>
 
-.phone-screen{
-    font-size:120px;
-}
+        </div>
 
-/* ================= FEATURES ================= */
+        <div class="hero-right">
+
+            <div class="ride-card">
+
+                <h3>Ride Preview</h3>
+
+                <div class="ride-item">
+                    <span>📍 Pickup</span>
+                    <strong>Current Location</strong>
+                </div>
+
+                <div class="ride-item">
+                    <span>📍 Destination</span>
+                    <strong>Select Destination</strong>
+                </div>
+
+                <div class="ride-price">
+
+                    Estimated Fare
+
+                    <h2>PKR 420</h2>
+
+                </div>
+
+                <button class="primary-btn">
+                    Find Driver
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>/
+* ================= FEATURES ================= */
 
 .features{
     padding:90px 0;
