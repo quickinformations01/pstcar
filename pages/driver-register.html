@@ -1,248 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Driver Registration | PST Car</title>
-
-<meta name="description"
-content="Become a verified PST Car driver.">
-
-<link rel="stylesheet"
-href="../css/registration.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Driver | PST Car</title>
+    <meta name="description" content="Register as a driver for PST Car, Pakistan's Trusted Ride platform.">
+    <link rel="stylesheet" href="../css/registration.css">
+    <script src="../js/driver-register.js" defer></script>
 </head>
-
 <body>
 
-<!-- ===========================
-HEADER
-============================ -->
-
-<header class="topbar">
-
-<div class="container">
-
-<a href="../index.html" class="logo">
-
-<div class="logo-icon">🚖</div>
-
-<div>
-
-<h2>PST Car</h2>
-
-<span>Pakistan's Trusted Ride</span>
-
-</div>
-
-</a>
-
-<a href="login.html"
-class="login-btn">
-
-Login
-
-</a>
-
-</div>
-
-</header>
-
-<!-- ===========================
-PAGE
-============================ -->
-
-<section class="register-page">
-
-<div class="container">
-
-<div class="register-card">
-
-<!-- Progress -->
-
-<div class="progress-area">
-
-<div class="progress-header">
-
-<h1>
-
-Become a PST Car Driver
-
-</h1>
-
-<span>
-
-Step 1 of 5
-
-</span>
-
-</div>
-
-<div class="progress">
-
-<div class="progress-fill"></div>
-
-</div>
-
-<p class="subtitle">
-
-Complete your profile to start receiving ride requests.
-
-Your documents will be verified before approval.
-
-</p>
-
-</div>
-
-<!-- Personal Information -->
-
-<div class="section">
-
-<div class="section-title">
-
-<div class="section-number">
-
-1
-
-</div>
-
-<div>
-
-<h2>
-
-Personal Information
-
-</h2>
-
-<p>
-
-Basic information about you
-
-</p>
-
-</div>
-
-</div>
-
-<div class="form-grid">
-
-<div class="form-group">
-
-<label>
-
-Full Name
-
-</label>
-
-<input
-type="text"
-id="fullName"
-placeholder="Muhammad Ali"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>
-
-Mobile Number
-
-</label>
-
-<input
-type="tel"
-id="mobile"
-placeholder="03XXXXXXXXX"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>
-
-Email Address
-
-</label>
-
-<input
-type="email"
-id="email"
-placeholder="example@email.com">
-
-</div>
-
-<div class="form-group">
-
-<label>
-
-City
-
-</label>
-
-<select id="city">
-
-<option value="">Select City</option>
-
-<option>Lahore</option>
-
-<option>Islamabad</option>
-
-<option>Rawalpindi</option>
-
-<option>Faisalabad</option>
-
-<option>Multan</option>
-
-<option>Bahawalpur</option>
-
-<option>Gujranwala</option>
-
-<option>Sialkot</option>
-
-<option>Sargodha</option>
-
-<option>Sheikhupura</option>
-
-<option>Other</option>
-
-</select>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Continue -->
-
-<div class="actions">
-
-<button
-type="button"
-class="primary-btn"
-id="nextStep">
-
-Continue →
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<script src="../js/driver-register.js"></script>
+    <header class="top-navigation" id="main-header">
+        <div class="nav-left">
+            <div class="brand-logo-container">
+                <svg id="pst-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="#2563EB" aria-label="PST Car Logo">
+                    <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                </svg>
+            </div>
+            <div class="brand-titles">
+                <span class="brand-name">PST Car</span>
+                <span class="brand-tagline">Pakistan's Trusted Ride</span>
+            </div>
+        </div>
+        <nav class="nav-right" aria-label="Primary Navigation">
+            <a href="login.html" class="btn-nav-login">Login Button</a>
+            <a href="../index.html" class="btn-nav-home">Back to Home</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-section" id="registration-hero">
+            <h1 class="hero-heading">Become a PST Car Driver</h1>
+            <p class="hero-subtitle">
+                Join Pakistan's fastest growing ride platform.<br>
+                Complete your profile once and start earning after approval.
+            </p>
+            <div class="progress-wrapper" aria-label="Registration Progress">
+                <span class="progress-indicator-text">Step 1 of 5</span>
+                <progress id="registration-progress-bar" value="1" max="5">Step 1 of 5</progress>
+            </div>
+        </section>
+
+        <section class="registration-section" id="registration-card-container">
+            <div class="registration-card">
+                <form id="driver-registration-form" action="/api/driver/register" method="POST" enctype="multipart/form-data">
+                    
+                    <fieldset class="form-section" id="section-personal-info">
+                        <legend class="section-title">SECTION 1: PERSONAL INFORMATION</legend>
+                        
+                        <div class="input-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full_name" required autocomplete="name" placeholder="Enter your full name">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="mobile-number">Mobile Number</label>
+                            <input type="tel" id="mobile-number" name="mobile_number" required autocomplete="tel" placeholder="03XXXXXXXXX">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email-address">Email</label>
+                            <input type="email" id="email-address" name="email_address" required autocomplete="email" placeholder="Enter your email address">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="city-selection">City</label>
+                            <select id="city-selection" name="city" required autocomplete="address-level2">
+                                <option value="" disabled selected>Select your city</option>
+                                <option value="Karachi">Karachi</option>
+                                <option value="Lahore">Lahore</option>
+                                <option value="Islamabad">Islamabad</option>
+                                <option value="Rawalpindi">Rawalpindi</option>
+                                <option value="Peshawar">Peshawar</option>
+                                <option value="Quetta">Quetta</option>
+                                <option value="Multan">Multan</option>
+                                <option value="Faisalabad">Faisalabad</option>
+                                <option value="Gujranwala">Gujranwala</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section" id="section-identity-verification">
+                        <legend class="section-title">SECTION 2: IDENTITY VERIFICATION</legend>
+                        
+                        <div class="input-group">
+                            <label for="cnic-number">CNIC Number</label>
+                            <input type="text" id="cnic-number" name="cnic_number" required placeholder="XXXXX-XXXXXXX-X" pattern="^\d{5}-\d{7}-\d{1}$">
+                        </div>
+
+                        <article class="file-upload-card" id="upload-cnic-front">
+                            <label for="cnic-front-file" class="upload-dropzone">
+                                <span class="upload-icon-wrapper" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#2563EB">
+                                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/>
+                                    </svg>
+                                </span>
+                                <span class="upload-card-title">CNIC Front Upload Card</span>
+                                <span class="upload-formats">Supported formats: JPG, PNG, PDF</span>
+                                <span class="upload-max-size">Maximum size: 5MB</span>
+                                <span class="btn-choose-file" role="button" tabindex="0">Choose File</span>
+                                <input type="file" id="cnic-front-file" name="cnic_front" accept=".jpg,.jpeg,.png,.pdf" required class="visually-hidden">
+                            </label>
+                            <div class="upload-preview-placeholder" id="preview-cnic-front">
+                                <span>No file selected for preview</span>
+                            </div>
+                        </article>
+
+                        <article class="file-upload-card" id="upload-cnic-back">
+                            <label for="cnic-back-file" class="upload-dropzone">
+                                <span class="upload-icon-wrapper" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#2563EB">
+                                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/>
+                                    </svg>
+                                </span>
+                                <span class="upload-card-title">CNIC Back Upload Card</span>
+                                <span class="upload-formats">Supported formats: JPG, PNG, PDF</span>
+                                <span class="upload-max-size">Maximum size: 5MB</span>
+                                <span class="btn-choose-file" role="button" tabindex="0">Choose File</span>
+                                <input type="file" id="cnic-back-file" name="cnic_back" accept=".jpg,.jpeg,.png,.pdf" required class="visually-hidden">
+                            </label>
+                            <div class="upload-preview-placeholder" id="preview-cnic-back">
+                                <span>No file selected for preview</span>
+                            </div>
+                        </article>
+                    </fieldset>
+
+                    <fieldset class="form-section" id="section-driving-licence">
+                        <legend class="section-title">SECTION 3: DRIVING LICENCE</legend>
+                        
+                        <div class="input-group">
+                            <label for="licence-number">Licence Number</label>
+                            <input type="text" id="licence-number" name="licence_number" required placeholder="Enter your valid licence number">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="licence-expiry">Licence Expiry</label>
+                            <input type="date" id="licence-expiry" name="licence_expiry" required>
+                        </div>
+
+                        <article class="file-upload-card" id="upload-licence-card">
+                            <label for="licence-file" class="upload-dropzone">
+                                <span class="upload-icon-wrapper" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#2563EB">
+                                        <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM5 15h14v2H5zM5 7h14v6H5z"/>
+                                    </svg>
+                                </span>
+                                <span class="upload-card-title">Licence Upload Card</span>
+                                <span class="upload-formats">Supported formats: JPG, PNG, PDF</span>
+                                <span class="upload-max-size">Maximum size: 5MB</span>
+                                <span class="btn-choose-file" role="button" tabindex="0">Choose File</span>
+                                <input type="file" id="licence-file" name="licence_document" accept=".jpg,.jpeg,.png,.pdf" required class="visually-hidden">
+                            </label>
+                            <div class="upload-preview-placeholder" id="preview-licence">
+                                <span>No file selected for preview</span>
+                            </div>
+                        </article>
+                    </fieldset>
+
+                    <fieldset class="form-section" id="section-vehicle-information">
+                        <legend class="section-title">SECTION 4: VEHICLE INFORMATION</legend>
+                        
+                        <div class="input-group">
+                            <label for="vehicle-type">Vehicle Type</label>
+                            <select id="vehicle-type" name="vehicle_type" required>
+                                <option value="" disabled selected>Select vehicle category</option>
+                                <option value="Mini">Mini</option>
+                                <option value="Go">Go (Sedan)</option>
+                                <option value="Go+">Go+ (SUV/Minivan)</option>
+                                <option value="Bike">Bike</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="vehicle-brand">Vehicle Brand</label>
+                            <input type="text" id="vehicle-brand" name="vehicle_brand" required placeholder="e.g., Toyota, Honda">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="vehicle-model">Vehicle Model</label>
+                            <input type="text" id="vehicle-model" name="vehicle_model" required placeholder="e.g., Corolla, Civic">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="vehicle-colour">Vehicle Colour</label>
+                            <input type="text" id="vehicle-colour" name="vehicle_colour" required placeholder="e.g., White, Silver">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="vehicle-registration">Vehicle Registration Number</label>
+                            <input type="text" id="vehicle-registration" name="vehicle_registration" required placeholder="e.g., LEA-1234">
+                        </div>
+
+                        <article class="file-upload-card" id="upload-vehicle-photo">
+                            <label for="vehicle-photo-file" class="upload-dropzone">
+                                <span class="upload-icon-wrapper" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#2563EB">
+                                        <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                                    </svg>
+                                </span>
+                                <span class="upload-card-title">Vehicle Photo Upload Card</span>
+                                <span class="upload-formats">Supported formats: JPG, PNG</span>
+                                <span class="upload-max-size">Maximum size: 10MB</span>
+                                <span class="btn-choose-file" role="button" tabindex="0">Choose File</span>
+                                <input type="file" id="vehicle-photo-file" name="vehicle_photo" accept=".jpg,.jpeg,.png" required class="visually-hidden">
+                            </label>
+                            <div class="upload-preview-placeholder" id="preview-vehicle-photo">
+                                <span>No file selected for preview</span>
+                            </div>
+                        </article>
+                    </fieldset>
+
+                    <fieldset class="form-section" id="section-account-security">
+                        <legend class="section-title">SECTION 5: ACCOUNT SECURITY</legend>
+                        
+                        <div class="input-group">
+                            <label for="account-password">Password</label>
+                            <input type="password" id="account-password" name="password" required autocomplete="new-password" placeholder="Create a strong password">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm_password" required autocomplete="new-password" placeholder="Re-enter your password">
+                        </div>
+
+                        <div class="input-group checkbox-group">
+                            <input type="checkbox" id="terms-checkbox" name="accept_terms" required>
+                            <label for="terms-checkbox" class="checkbox-label">I agree to the Terms of Service and Privacy Policy of PST Car.</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-submission-area">
+                        <button type="submit" id="submit-driver-registration" class="btn-large-primary">Register Driver Button</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
 
 </body>
-
 </html>
