@@ -1,0 +1,540 @@
+/* ==========================================================================
+   CSS RESET & VARIABLES (Overrides all previous styles)
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Theme Colors */
+    --primary: #2563EB;
+    --primary-hover: #1D4ED8;
+    --primary-light: #EFF6FF;
+    --secondary: #1E293B;
+    --background: #F8FAFC;
+    --white: #FFFFFF;
+    
+    /* Utility Colors */
+    --text-muted: #64748B;
+    --border-color: #E2E8F0;
+    --border-hover: #CBD5E1;
+    --success: #10B981;
+    --error: #EF4444;
+
+    /* Theme Properties */
+    --border-radius-main: 20px;
+    --border-radius-sm: 12px;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition-speed: 0.3s;
+    
+    /* Typography */
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--secondary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+.top-navigation {
+    background-color: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--secondary);
+    line-height: 1.2;
+}
+
+.brand-tagline {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-nav-login, .btn-nav-home {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-nav-login {
+    color: var(--primary);
+    background-color: var(--primary-light);
+}
+
+.btn-nav-login:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-nav-home {
+    color: var(--secondary);
+}
+
+.btn-nav-home:hover {
+    color: var(--primary);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+    text-align: center;
+    padding: 3rem 1.5rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-heading {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.progress-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.progress-indicator-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: var(--border-color);
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--border-color);
+    border-radius: 4px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--primary);
+    border-radius: 4px;
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--primary);
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   REGISTRATION CARD & FORM
+   ========================================================================== */
+.registration-section {
+    padding: 0 1rem 4rem;
+}
+
+.registration-card {
+    background-color: var(--white);
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--shadow-lg);
+    padding: 1.5rem;
+}
+
+.form-section {
+    border: none;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.section-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-light);
+    width: 100%;
+    padding-bottom: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--secondary);
+    background-color: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--text-muted);
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-light);
+    background-color: var(--white);
+}
+
+select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748B'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+/* ==========================================================================
+   FILE UPLOAD CARDS
+   ========================================================================== */
+.file-upload-card {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--background);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.file-upload-card:hover,
+.file-upload-card:focus-within {
+    border-color: var(--primary);
+    background-color: var(--primary-light);
+}
+
+.upload-dropzone {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.upload-icon-wrapper {
+    background-color: var(--white);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 0.5rem;
+    transition: transform var(--transition-speed) ease;
+}
+
+.file-upload-card:hover .upload-icon-wrapper {
+    transform: translateY(-5px);
+}
+
+.upload-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.upload-formats,
+.upload-max-size {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.btn-choose-file {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.625rem 1.5rem;
+    background-color: var(--white);
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-speed) ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.file-upload-card:hover .btn-choose-file {
+    border-color: var(--primary);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.upload-preview-placeholder {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   CHECKBOX & SECURITY
+   ========================================================================== */
+.checkbox-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    appearance: none;
+    background-color: var(--background);
+    margin: 0;
+    font: inherit;
+    color: var(--primary);
+    width: 1.25em;
+    height: 1.25em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    margin-top: 0.15rem;
+}
+
+.checkbox-group input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--white);
+    background-color: transform;
+    transform-origin: center;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.checkbox-group input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.checkbox-label {
+    font-size: 0.875rem;
+    font-weight: 400 !important;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   SUBMIT BUTTON
+   ========================================================================== */
+.form-submission-area {
+    margin-top: 2rem;
+}
+
+.btn-large-primary {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 1.25rem 2rem;
+    border: none;
+    border-radius: var(--border-radius-main);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-large-primary:hover {
+    background-color: var(--primary-hover);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.btn-large-primary:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Mobile First to Desktop)
+   ========================================================================== */
+@media (min-width: 768px) {
+    /* Header */
+    .top-navigation {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+    }
+
+    .nav-right {
+        width: auto;
+        justify-content: flex-end;
+    }
+
+    /* Hero */
+    .hero-heading {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    /* Registration Card */
+    .registration-card {
+        padding: 3rem;
+    }
+    
+    /* Create a grid layout for standard form inputs */
+    #section-personal-info,
+    #section-vehicle-information,
+    #section-account-security {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+    }
+    
+    .section-title {
+        grid-column: 1 / -1;
+    }
+
+    /* Span full width for specific fields */
+    .checkbox-group,
+    #city-selection,
+    #vehicle-registration {
+        grid-column: 1 / -1;
+    }
+
+    /* Keep file uploads and their sections in single column layout for visual impact */
+    #section-identity-verification,
+    #section-driving-licence {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Larger desktop tweaks */
+    #section-identity-verification .file-upload-card {
+        width: 100%;
+    }
+    
+    /* Put CNIC Front and Back side-by-side */
+    #section-identity-verification {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.5rem;
+    }
+    
+    #section-identity-verification .input-group:first-of-type {
+        grid-column: 1 / -1;
+    }
+}
